@@ -1,0 +1,158 @@
+@mixin flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin align-self($value: auto) {
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	} @else if $value == flex-end {
+		-ms-flex-item-align: end;
+	} @else {
+		-ms-flex-item-align: $value;
+	}
+	align-self: $value;
+}
+@mixin button-text {
+	font-family: 'FuturaDemiC';
+    font-size: 13px;
+    line-height: 15px;
+	text-transform: uppercase;
+}
+@mixin button-style {
+	cursor: pointer;
+	color: $color-1;
+	outline: 0;
+	border: 0;
+	border-radius: 2px;
+	background: $color-3;
+	box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+	&:hover{
+        color: $color-2;
+        box-shadow: 0px 5px 15px rgba(66, 54, 34, 0.5);
+    }
+}
+@mixin button-size{
+	min-width: 207px;
+    height: 51px;
+}
+
+@mixin text-center{
+	max-width: 680px;
+	margin: 0 auto;
+	font-family: "FuturaBookC";
+	font-size: 20px;
+	text-align: center;
+}
+@mixin title-section{
+	padding: 12px 0;
+	margin: 0;
+	font-family: "Yeseva One";
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	text-transform: uppercase;
+}
+@mixin description-list{
+	margin: 0;
+	font-family: "FuturaBookC";
+	font-size: 15px;
+	line-height: 25px;
+	color: #959595;
+	@media (max-width: $screen-md) {
+		font-size: 13px;
+		line-height: 23px;
+	}
+}
+@mixin description-title{
+	font-family: "Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: #363636;
+	margin: 0;
+	@media (max-width: $screen-md) {
+		font-size: 15px;
+		line-height: 21px;
+	}
+}
+@mixin element{
+	width: 330px;
+	padding: 0 31px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+@mixin icon-title{
+	margin: 0 auto;
+	height: 33px;
+	width: 28px;
+	position: relative;
+	background-size: contain;
+	background-repeat: no-repeat;
+	&::after,
+    &::before{
+            content: "";
+            position: absolute;
+            top: 39%;
+            display: block;
+            height: 1px;
+            width: 32px;
+            background-color: $color-3;
+    }
+    &::after{
+            right: 45px;
+    }
+    &::before{
+            left: 45px;
+    }
+}
+@mixin form-title{
+	width: 272px;
+	margin: 0 auto;
+	font-family: "FuturaDemiC";
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	color: $color-1;
+}
+
+
+@mixin form-input{
+	border: 0;
+	border-bottom: 1px solid rgba(54, 54, 54, 0.3); 
+	font-family: "FuturaBookC";
+	font-size: 18px;
+	line-height: 24px;
+	
+}
+@mixin form-label{
+	display: block;
+    font-family: "FuturaBookC";
+    font-size: 15px;
+    line-height: 20px;
+}

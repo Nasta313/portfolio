@@ -1,0 +1,143 @@
+.section-steps{
+    padding: 0 calc(50% - 640px) 78px;
+    background-color: $color-2;
+    margin-top: -50px;
+    @include flex;
+    @include justify-content($value: space-between);
+    @media (max-width: $screen-lg) {
+        display: none;
+    }
+    &__left-col{
+        max-width: 337px;
+        padding: 0 18px;
+    }
+
+    &__about,
+    &__title,
+    &__slide-number,
+    &__about,
+    &__slide-title{
+        text-transform: uppercase;
+    }
+
+    &__title,
+    &__slide-number,
+    &__slide-title{
+        font-family: "Yeseva One";
+    }
+
+    &__about,
+    &__text,
+    &__slide-number,
+    &__slide-title,
+    &__menu-link{
+        font-size: 15px;
+    }
+
+    &__about,
+    &__slide-number,
+    &__text{
+        color: #FFFFFF;
+    }
+
+    &__about{
+        display: block;
+        font-family: "FuturaDemiC";
+        line-height: 21px;
+    }
+
+    &__title{
+        width: 160px;
+        margin: 10px 0 80px;
+        position: relative;
+        font-size: 27px;
+        line-height: 37px;
+        color: #E3B873;
+        &:after{
+            content:"";
+            position: absolute;
+            bottom: 20px;
+            left: 160px;
+            display: block;
+            width: 92px;
+            height: 1px;
+            background-color: $color-3;
+            @media (max-width: $screen-md) {
+                display:none;
+            }
+        }
+    }
+
+    &__slide-number{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    &__slide-title{
+        max-width: 220px;
+        line-height: 23px;
+        color: #E3B873;
+        margin: 22px 0 16px;
+    }
+
+    &__text{
+        font-family: "FuturaBookC";
+        line-height: 25px;
+    }
+
+    &__right-col{
+        padding: 0 18px;
+        width: 60%;
+    }
+
+    &__menu{
+        margin: 87px 0 32px;
+    }
+
+    &__menu-list{
+        @include flex;
+        @include justify-content($value: space-between);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__menu-item{
+        max-width: 100px;
+    }
+
+    &__menu-link{
+        text-decoration: none;
+        font-family: "FuturaBookC";
+        line-height: 18px;
+        color: rgba( #FFFFFF,  0.3);
+        &:hover{
+            color: rgba(#FFFFFF, 1);
+        }
+        &--active{
+            color: rgba(#FFFFFF, 1);
+        }
+    }
+
+    &__menu-num{
+        border-bottom: 1px solid $color-3;
+    }
+
+    &__menu-value{
+        margin: 12px 0;
+    }
+
+    &__image-wrap{
+        width: 100%;
+        height: 376px;
+        background-image: url(assets/images/image-7.png);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    &__pagination{
+        margin: 90px 0 100px;
+    }
+}

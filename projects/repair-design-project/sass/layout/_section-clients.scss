@@ -1,0 +1,127 @@
+.section-clients{
+    @media (max-width: $screen-lg) {
+        display: none;
+    }
+    &__title{
+        @include title-section;
+        color: $color-3;
+    }
+
+    &__icon{
+        @include icon-title;
+        background-image: url(assets/images/icon-clients.png);
+    }
+
+    &__text{
+        width: 360px;
+        padding: 15px 0 38px;
+        @include text-center;
+        color: $color-2;
+    }
+
+    &__items{
+        padding: 0 calc(50% - 618px);
+        @include flex;
+        @include justify-content($value: space-between);
+    }
+
+    &__item{
+        width: 356px;
+        position:relative;
+        padding: 24px 0 0 20px;
+        margin-bottom: 70px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+        @media (max-width: $screen-xxl) {
+            width: 300px;
+        }
+    }
+
+    &__item-header{
+        @include flex;
+        @include justify-content($value: flex-start);
+        align-items: center;
+    }
+
+    &__item-icon-1,
+    &__item-icon-2,
+    &__item-icon-3{
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        background-position: center center;
+    }
+    &__item-icon-1{
+        background-image: url(assets/images/client-1.png);
+    }
+    &__item-icon-2{
+        background-image: url(assets/images/client-2.png);
+    }
+    &__item-icon-3{
+        background-image: url(assets/images/client-3.png);
+    }
+    &__name{
+        width: 178px;
+        padding-left: 23px;
+        font-family: "Yeseva One";
+        font-size: 18px;
+        line-height: 23px;
+        color: #181818;
+    }
+    &__comment{
+        width: 95.5%;
+        margin: 0;
+        font-family: "FuturaBookC";
+        font-size: 15px;
+        line-height: 27px;
+        color: #959595;
+        padding-bottom: 100px;
+    }
+    &__button{
+        width: 290px;
+        height: 54px;
+        padding: 0 18px;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        @include flex;
+        @include justify-content($value: space-between);
+        align-items: center;
+        outline: 0;
+        border: 0;
+        color: #FFFFFF;
+        background: #E3B873;
+        box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+        &:hover{
+            box-shadow: 0px 5px 15px rgba(66, 54, 34, 0.5);
+        }
+    }
+    &__button-icon-1,
+    &__button-icon-2{
+        width: 33px;
+        height: 32px;
+    }
+    &__button-icon-1{
+       background-image: url(assets/images/client-icon-1.png);
+    }
+    &__button-icon-2{
+        position: relative;
+        background-image: url(assets/images/client-icon-2.png);
+        &::before{
+            content: "";
+            height: 54px;
+            width: 1px;
+            background-color:  #FFFFFF;
+            position: absolute;
+            left: -11px;
+            top: -11px;
+        }
+    }
+    &__room-value{
+        display: block;
+        font-family: "Yeseva One";
+        font-size: 17px;
+        line-height: 24px;
+      
+    }
+
+}

@@ -1,0 +1,80 @@
+.section-repair{
+    @media (max-width: $screen-md) {
+        margin-top: 50px;
+    }
+    &__title{
+        @include title-section;
+        color: #181818;
+    }
+    &__icon{
+        @include icon-title;
+        background-image: url("assets/images/tools.png");
+    }
+    &__items{
+        @include flex;
+        @include justify-content($value: center);
+        padding: 0 calc(50% - 637px);
+        margin: 27px 0;
+        @media (max-width: $screen-xl) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $screen-md) {
+            margin: 40px 0 0;
+        }
+    }
+    &__item{
+        margin: 20px 18px 0px;
+        @include element;
+        @media (max-width: $screen-md) {
+            padding: 0;
+        }
+        &:first-child{
+            background-image:  url("assets/images/redecorating.png");
+        }
+        &:nth-child(2){
+            background-image:  url("assets/images/overhaul.png");
+        }
+        &:last-child{
+            background-image:  url("assets/images/repair.png");
+        }
+    }
+    &__item-title{
+        @include description-title;
+        padding: 23px 30px 4px;
+        @media (max-width: $screen-md) {
+           padding: 17px 30px 4px;
+        }
+    }
+    &__descr-list{
+        @include description-list;
+        padding: 0 0 59px 46px;
+        @media (max-width: $screen-md) {
+            padding:  0 0 40px 46px;
+        }
+    }
+    &__item-descr{
+        background-color: $color-1;
+        margin: 294px auto 0;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        @media (max-width: $screen-md) {
+            margin: 223px 0 0;
+            width: 270px;
+        }
+    }
+    &__button{
+        @include button-style;
+        font-family: 'Yeseva One';
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+        min-width: 225px;
+        height: 51px;
+        position: relative;
+        bottom: 25px;
+        @media (max-width: $screen-md) {
+            min-width: 189px;
+            height: 42px;
+        }
+       
+    }
+}

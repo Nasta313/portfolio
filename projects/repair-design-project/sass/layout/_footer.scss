@@ -1,0 +1,19 @@
+.footer{
+    min-height: 133px;
+    padding: 0 calc(50% - 628px);
+    background-color: $color-2;
+    @include flex();
+    @include justify-content($value: space-between);
+    @media (max-width: $screen-xxl) {
+        padding: 0 18px;
+    }
+    @media (max-width: $screen-md) {
+        display:none;
+    }
+    &__logo,
+    &__nav,
+    &__contacts,
+    &__btn{
+        @include align-self($value:center);
+    }
+}

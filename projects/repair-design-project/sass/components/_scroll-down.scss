@@ -1,0 +1,33 @@
+.scroll-down{
+    width: 295px;
+    height: 97px;
+    color: $color-1;
+    font-family: "Yeseva One";
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $color-4;
+    border: 0;
+    outline: 0;
+    @include flex();
+    @include justify-content($value:flex-end);
+    &:hover{
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+    }
+
+    &__text{
+        display: block;
+        padding: 12px;
+        @include align-self($value:center);
+    }
+
+    &__image{
+        height: 29px;
+        width: 29px;
+        margin-right: 41px;
+        background-image: url(assets/images/scroll-down.png);
+        background-size: cover;
+        @include align-self($value:center);
+    }
+}

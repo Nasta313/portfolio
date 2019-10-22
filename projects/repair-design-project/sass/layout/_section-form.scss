@@ -1,0 +1,75 @@
+.contact-form{
+    margin: 0 auto;
+    max-width: 769px;
+    @media (max-width: $screen-lg) {
+        padding: 0 18px;
+        max-width: 100%;
+        background-color: $color-2;
+        background: linear-gradient(to top, $color-1 7%, $color-2 7%);
+    }
+    @media (max-width: $screen-md) {
+        position: relative;
+    }
+
+    &__list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include flex;
+        @include justify-content($value: space-between);
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;
+            @include justify-content($value: center);
+            align-content: space-between;
+            min-height: 310px;
+        }
+    }
+    
+    &__label{
+        @include form-label;
+        color: rgba(54, 54, 54, 0.5);
+        @media (max-width: $screen-md) {
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__input-text{
+        width: 231px;
+        @include form-input;
+        color: #363636;
+        background-color: transparent;
+        @media (max-width: $screen-md) {
+            width: 341px;
+        }
+    }
+
+    &__submit{
+        width: 200px;
+        height: 51px;
+        border: 0;
+        font-family: "FuturaDemiC";
+        font-size: 15px;
+        line-height: 26px;
+        background-color: $color-3;
+        @include button-style;
+        @media (max-width: $screen-md) {
+            width: 341px;
+            margin-top: 48px;
+        }
+    }
+
+    &__checkbox{
+        padding: 34px 0 129px;
+        @include justify-content($value: center);
+        @media (max-width: $screen-lg) {
+            color: #fff;
+        }
+        @media (max-width: $screen-md) {
+            padding: 0;
+            position: absolute;
+            bottom: 110px;
+        }
+    }
+}

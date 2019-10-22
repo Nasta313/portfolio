@@ -1,0 +1,30 @@
+.pagination{
+    @include flex;
+    @include justify-content($value: flex-start);
+    align-items: center;
+    a>img{
+        display: block;
+        margin-right: 30px;
+        &:hover{
+            background-color: $color-3;
+        }
+    }
+    &__link{
+        width: 10px;
+        height: 10px;
+        margin-right: 17px;
+        background-color: $color-1;
+        border-radius: 50%;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.3);
+        &__last-child{
+            margin-right: 30px;
+        }
+        &--active{
+            background: rgba(255, 255, 255, 1);
+        }
+        &:hover{
+            background: rgba(255, 255, 255, 0.7);
+        }
+    }
+}

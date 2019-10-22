@@ -124,10 +124,10 @@
   &__items-container {
     position: relative;
     width: 100%;
-    min-height: 500px;
+    height: 490px;
     overflow: hidden;
     @media (max-width: 960px) {
-      min-height: 400px;
+      height: 400px;
     }
   }
 

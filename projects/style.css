@@ -7,29 +7,53 @@ body{
     justify-content: center;
     position: relative;
 }
-.frame{
+.iframe{
     margin: 0 auto;
     padding: 0;
     border: 0;
     outline: 0;
     width: 100%;
-    height: 10000px;
+    height: 10132px;
     text-align: center;
 }
+.width-mobile-375{
+    width: 375px;
+    height: 8800px;
+}
+.width-mobile-640{
+    width: 640px;
+    height:1555px;
+}
+
 .buttons{
     position: fixed;
-   bottom:0;
+    bottom:0;
     right: 20px;
-    
+   
 }
+
 .buttons__mobile-desktop,
 .buttons__back{
     display: block;
     margin-bottom: 20px;
     color: #fff;
-    background-color: green;
+    background-color:#42631e;
     width: 200px;
     height: 50px;
     border: 0;
     outline: 0;
+}
+
+.buttons__mobile-desktop::after{
+    content: "mobile";
+    text-transform: uppercase;
+}
+
+.mobile{
+    background-color: blueviolet;
+}
+
+.mobile::after{
+    content: "desktop";
+    text-transform: uppercase;
 }

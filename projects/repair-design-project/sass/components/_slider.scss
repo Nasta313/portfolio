@@ -1,0 +1,59 @@
+.slider{
+    position: relative;
+    width: 58.9%;
+    overflow: hidden;
+    height: 482px;
+    @media (max-width: $screen-xl) {
+        width: 73%;
+    }
+    @media (max-width: $screen-lg) {
+        width: 90%;
+        height: 400px;
+    }
+    @media (max-width: $screen-md) {
+       
+        height: 350px;
+    }
+    @media (max-width: $screen-sm) {
+       
+        height: 300px;
+    }
+    @media (max-width: $screen-sm) {
+        height: 242px;
+    }
+
+    &__container{
+        width: 2500px;
+        height: 100%;
+        @include flex;
+        @include justify-content($value: flex-start);
+    }
+    
+    &__image{
+        margin-right: 20px;
+        width: 679px;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width: $screen-xl) {
+            width: 31%;
+        }
+        @media (max-width: $screen-sm) {
+            background-size: contain;
+        }
+    
+        &:first-of-type{
+            background-image: url(assets/images/image-project1.png);
+        }
+        &:nth-of-type(2){
+            background-image: url(assets/images/image-project2.png);
+        }
+    }
+
+    &__controls{
+        top: 45%;
+        @media (max-width: $screen-sm) {
+            top: 43%;
+        }
+    }
+}

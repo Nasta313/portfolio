@@ -1,0 +1,31 @@
+.checkbox{
+    @include flex;
+   align-items: center;
+    &__el{
+      display: none;
+    }
+    &__el-1 {
+      content: "";
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      background: #E3B873;
+      border-radius: 1px;
+      @include align-self($value: center);
+    }
+    &__el:checked + &__el-1::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 10px;
+        border: 0 solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotateZ(45deg);
+        margin: 0px 5px;
+    } 
+    &__text{
+        font-family: "FuturaBookC";
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

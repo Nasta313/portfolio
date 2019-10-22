@@ -1,0 +1,179 @@
+.section-advantages{
+    padding: 0 calc(50% - 720px) 52px;
+    margin-top: 69px; 
+    overflow: hidden;
+    @include flex;
+    @include justify-content($value: flex-start);
+    flex-wrap: wrap;
+    position: relative;
+    @media (max-width: $screen-xl) {
+        @include justify-content($value: center);
+        margin-top: 50px; 
+        padding-bottom: 50px;
+    }
+    @media (max-width: $screen-md) {
+       display:none;
+    }
+    &__left{
+        background-image: url("assets/images/bg-buildings.png");
+        background-repeat: no-repeat;
+        height: 725px;
+        width: 58%;
+        @media (max-width: $screen-xxl) {
+            width:50%;
+        }
+        @media (max-width: $screen-xl) {
+            display: none;
+        }
+    }
+    &__elipse{
+        width: 636px;
+        height: 636px;
+        border-radius: 50%;
+        border: 4px solid rgb(227,184,115);
+        border-left-style: none;
+        border-top-style: hidden;
+        border-bottom-style: hidden;
+        position:relative;
+        left: -160px;
+        top: 40px;
+        @media (max-width: $screen-xxl) {
+            left:-400px;
+        }
+    }
+    &__list{
+        list-style: none;
+        padding: 0;
+    }
+    &__list-item{
+        position: absolute;
+        @include flex;
+        &:nth-child(1){
+            top: 50px;
+            left: 510px;
+        }
+        &:nth-child(2){
+            top: 170px;
+            left: 585px;
+        }
+        &:nth-child(3){
+            top: 335px;
+            left: 605px;
+        }
+        &:nth-child(4){
+            top: 475px;
+            left: 545px;
+            width: 320px;
+        }
+    }
+    &__text{
+        width: 420px;
+        align-self: center;
+        font-family: "FuturaMediumC";
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &__circle{
+        border: 10px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        min-width: 42px;
+        height: 42px;
+        background-color: $color-3;
+        border-radius: 50%;
+        font-family: "Yeseva One";
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    &__form{
+        align-self: center;
+        height: 509px;
+        width: 506px;
+        margin-top: 96px;
+        background-color: $color-2;
+        box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+        @media (max-width: $screen-xl) {
+            @include justify-content($value: center);
+            margin-top: 0px; 
+        }
+    }
+    &__form-title{
+        @include form-title;
+        padding: 28px 0;
+    }
+
+    &__form-list{
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        width: 408px;
+    }
+
+    &__form-item{
+        padding-bottom: 54px;
+    }
+
+    &__form-input{
+        width: 408px;
+        @include form-input;
+        color: $color-1;
+        background-color: $color-2;
+    }
+
+    &__form-label{
+        @include form-label;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__form-submit{
+        width: 213px;
+        height: 51px;
+        border: 0;
+        background-color: $color-3;
+        font-family: "FuturaDemiC";
+        font-size: 13px;
+        line-height: 18px;
+        @include button-style;
+        @include button-text;
+        margin: 40px 0 0 244px;
+    }
+    
+    &__checkbox{
+        color: white;
+        padding: 16px 0 0 16px;
+        width: 408px;
+        margin: 0 auto;
+    }
+}
+
+
+.advantages-right{
+    display: flex;
+    justify-content: flex-start;
+    padding: 41px 32px;
+    @media (max-width: $screen-xl) {
+        display: none;
+    }
+    &__icon{
+        width: 72px;
+        height: 72px;
+        background-color: #E3B873;
+        background-image: url(assets/images/icon-pig.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+    }
+    &__text{
+       width: 200px;
+        font-family: "FuturaDemiC";
+        font-size: 20px;
+        line-height: 25px;
+        color: #E3B873;
+        margin: 0;
+        padding: 0 0 0 20px;
+        align-self: center;
+    }
+}

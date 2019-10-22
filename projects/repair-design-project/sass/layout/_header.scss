@@ -1,0 +1,96 @@
+.header{
+    min-height: 83px;
+    padding: 0 calc(50% - 628px);
+    background-color: $color-2;
+    @include flex();
+    @include justify-content($value: space-between);
+    @media (max-width: $screen-xxl) {
+        padding: 0 18px;
+    }
+    @media (max-width: $screen-md) {
+        min-height: 57px;
+    }
+    &__h1{
+        visibility: hidden;
+        position: absolute;
+    }
+    &__logo,
+    &__nav,
+    &__contacts,
+    &__btn    {
+        @include align-self($value:center);
+    }
+}
+
+.logo{
+    display: block;
+    min-width: 170px;
+    font-family: 'FuturaDemiC';
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-3;
+    text-decoration: none;
+}
+
+.navigation{
+    width: 582px;
+    font-family: 'FuturaBookC';
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-1;
+    @media (max-width: $screen-lg) {
+        width: 430px;
+    }
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+    &__list{
+        @include flex();
+        justify-content: space-between;
+        padding-left: 0;
+    }
+    &__item{
+        list-style: none;
+    }
+    &__link{
+        text-decoration: none;
+        color: $color-1;
+        text-transform: uppercase;
+        &:hover{
+            color: $color-3;
+        }
+        &--active{
+            color: $color-3;
+        }
+    }
+}
+
+.contacts{
+    display: block;
+    min-width: 130px;
+    font-family: 'FuturaDemiC';
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-3;
+    @media (max-width: $screen-md) {
+        color: $color-1;
+        text-decoration: none;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.button-header{
+    min-width: 161px;
+    height: 37px;
+    border: 0;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    background-color: $color-3;
+    @include button-style();
+    @include button-text;
+    @media (max-width: $screen-xl) {
+        display: none;
+    }
+  
+}
