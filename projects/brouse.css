@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.frame{
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 10000px;
+    text-align: center;
+}
+.buttons{
+    position: fixed;
+   bottom:0;
+    right: 20px;
+    
+}
+.buttons__mobile-desktop,
+.buttons__back{
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: green;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+}
