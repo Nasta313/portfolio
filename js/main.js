@@ -14,6 +14,26 @@ for (var i = 0; i < acc.length; i++) {
   });
 }
 
+/* Hide or show description of projects*/
+
+function showDescr1() {
+	this.classList.toggle("description");
+	let descr = document.querySelector("#descr-project1");
+	descr.classList.toggle("visible");
+}
+function showDescr2() {
+	this.classList.toggle("description");
+	let descr = document.querySelector("#descr-project2");
+	descr.classList.toggle("visible");
+}
+
+var buttonProject1 = document.querySelector("#button-project1");
+var buttonProject2 = document.querySelector("#button-project2");
+buttonProject1.addEventListener("touchstart", showDescr1 );
+buttonProject2.addEventListener("touchstart", showDescr2 );
+buttonProject1.addEventListener("click", showDescr1 );
+buttonProject2.addEventListener("click", showDescr2 );
+
 /*  Slider  */
 
 let items = document.querySelectorAll('.portfolio__slider-item');
