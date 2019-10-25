@@ -1,4 +1,9 @@
-let buttonBack = document.getElementById("swich");
+let back = document.getElementById("back");
+back.addEventListener("click", function(){
+    history.back();
+})
+
+let buttonBack = document.getElementById("swich2");
 
 buttonBack.addEventListener("click", function(){
     this.classList.toggle("mobile");
