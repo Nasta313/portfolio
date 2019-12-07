@@ -27,12 +27,27 @@ function showDescr2() {
 	descr.classList.toggle("visible");
 }
 
-var buttonProject1 = document.querySelector("#button-project1");
-var buttonProject2 = document.querySelector("#button-project2");
+let buttonProject1 = document.querySelector("#button-project1");
+let buttonProject2 = document.querySelector("#button-project2");
 buttonProject1.addEventListener("touchstart", showDescr1 );
 buttonProject2.addEventListener("touchstart", showDescr2 );
 buttonProject1.addEventListener("click", showDescr1 );
 buttonProject2.addEventListener("click", showDescr2 );
+
+
+var link1 = document.getElementById('link1');
+link1.addEventListener("touchstart", go1 );
+function go1(){
+	console.log("go");
+	document.location.href = "projects/index2.html";
+}
+var link2 = document.getElementById('link2');
+link2.addEventListener("touchstart", go2 );
+function go2(){
+	console.log("go2");
+	document.location.href = "projects/index1.html";
+}
+
 
 /*  Slider  */
 
