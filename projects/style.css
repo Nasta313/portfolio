@@ -57,3 +57,8 @@ body{
     content: "desktop";
     text-transform: uppercase;
 }
+@media (max-width: 640px) {
+    .buttons__mobile-desktop{
+        display: none;
+    }
+}
